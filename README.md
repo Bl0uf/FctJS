@@ -5,7 +5,16 @@
 [Web Starter Kit](https://developers.google.com/web/tools/starter-kit/) is an opinionated boilerplate for web development. Tools for building a great experience across many devices and [performance oriented](#web-performance). Helping you to stay productive following the best practices outlined in Google's [Web Fundamentals](https://developers.google.com/web/fundamentals/). A solid starting point for both professionals and newcomers to the industry.
 
 ### Informations
-Ce site est un référencement basique de quelques fonctionnalitées en javascript
+Ce site est un référencement basique de quelques fonctionnalitées en javascript comprenant les fichiers à télécharger pour les télécharger depuis le dépôt.
+
+### Installation 
+Installer sur le poste [Ruby](https://www.ruby-lang.org/fr/), [NodeJS](https://nodejs.org/en/), [Git](https://git-scm.com), [Sass](http://sass-lang.com) (par ligne de commande depuis Ruby) et [Gulp](http://gulpjs.com) (par ligne de commande depuis Node).
+
+Une fois Ruby et Node installés, lancer Ruby et entrer la commande `gem install sass` pour télécharger SASS, et dans l'invite de commande NodeJs `npm install -g gulp` (`-g` instale Gulp sur le poste en général), puis pour vérifier si tout est bien installé, lancer la commande `git --version && npm-v`
+
+Dans le projet (installé sur l'ordinateur) lancer la commande suivante `npm install` depuis le dossier du projet pour installer toutes les dépendances.
+
+Lancer la commande `gulp serve` pour lancer le serveur local avec Gulp.
 
 ### Features
 
