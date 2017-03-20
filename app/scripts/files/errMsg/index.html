@@ -2,9 +2,54 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Message d'erreurs</title>
+    <title>Messages d'erreurs</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    <div id="title" class="title">
+        <h1>Messages d'erreurs</h1>
+    </div>
+    <div id="contents" class="contents">
+        <h2>Présentation</h2>
+        <p>Cette page est a titre d'exemple, en effet si le formulaire n'est pas correctement renseigné, des messages d'erreurs apparaitront</p>
+        <div id="form" class="form">
+            <form action="#" method="get">
+                <fieldset>
+                    <legend>Formulaire à compléter</legend>
+                    <label>Nom :</label>
+                    <input id="name_field" type="text" name="name_field"><br/>
+                    <div id="errMsgName" class="errMsgName">Oui</div>
+                    <div id="errMsgNbName" class="errMsgNb">Votre prénom ne peut pas contenir de numéros,de !, de ?, de /, de \, de _</div>
+                    <label>Prénom :</label>
+                    <input id="surname_field" type="text" name="surname_field"><br/>
+                    <div id="errMsgSurname" class="errMsg"></div>
+                    <div id="errMsgNbSurname" class="errMsgNb">Votre nom ne peut pas contenir de numéros,de !, de ?, de /, de \, de _</div>
+                    <label>Numéro de téléphone : </label>
+                    <input id="phoneNbr_field" type="tel" pattern="^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$" name="phoneNbr_field"><br/>
+                    <div id="errMsgNumber" class="errMsg">Votre numéro de téléphone ne peut contenir que des nombres</div>
+                    <label>Mail :</label>
+                    <input id="mail_field" type="email" name="mail_field"><br/>
+                    <div id="errMsgMail" class="errMsg">Veuillez renseigner l'e-mail</div>
+                    <label>Votre sexe :</label><br/>
+                    <input id="gender_field_male" type="radio" name="gender_field_male" value="male">Homme<br/>
+                    <input id="gender_field_female" type="radio" name="gender_field_female" value="female">Femme<br/>
+                    <div id="errMsgGender" class="errMsg">Veuillez renseigner au moins un sexe</div>
+                    <label>Votre pays de résidence :</label><br/>
+                    <select id="country" name="country">
+                        <option>France</option>
+                        <option>Belgique</option>
+                        <option>Italie</option>
+                        <option>Allemagne</option>
+                        <option>Autre</option>
+                    </select><br/>
+                    <div id="errMsgCountry" class="errMsg">Le pays n'est pas valide</div>
+                    <input id="submit" type="submit" value="Envoyer">
+                    <input id="reset" type="reset" value="Réinitialiser">
+                </fieldset>
+            </form>
+        </div>
+    </div>
+<script src="errMsg.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </body>
 </html>
