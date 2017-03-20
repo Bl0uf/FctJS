@@ -1,3 +1,7 @@
 /**
- * Created by etien on 19/03/2017.
+ * NOM DU FICHIER : errMsg.js
+ * CREATION : 20/03/2017
+ * CREATEUR : ETIENNE BLANC-COQUAND (etienne1296pro@gmail.com)
+ * FONCTIONS : RETOURNER DES MESSAGES D'ERREUR SI LA SAISIE N'EST PAS CORRECTE
  */
+/* eslint-env browser */
