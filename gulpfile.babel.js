@@ -83,9 +83,11 @@ gulp.task('styles', () => {
   ];
 
   // For best performance, don't add Sass partials to `gulp.src`
-  return gulp.src([
+  //noinspection JSAnnotator
+return gulp.src([
     'app/styles/**/*.scss',
-    'app/styles/**/*.css'
+    'app/styles/**/*.css',
+    'app/scripts/**/*.css'
   ])
     .pipe($.newer('.tmp/styles'))
     .pipe($.sourcemaps.init())
@@ -241,6 +243,7 @@ gulp.task('generate-service-worker', ['copy-sw-scripts'], () => {
       // Add/remove glob patterns to match your directory setup.
       `${rootDir}/images/**/*`,
       `${rootDir}/scripts/**/*.js`,
+      `${rootDir}/scripts/**/*.css`,
       `${rootDir}/styles/**/*.css`,
       `${rootDir}/*.{html,json}`
     ],
