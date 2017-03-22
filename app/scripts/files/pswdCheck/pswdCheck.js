@@ -13,14 +13,13 @@ $(document).ready(function () {
         $reset = $("#reset"),
         $champPassword = $(".passwordChamp");
 
+    $submit.click(function () {
+        concordanceMdp($mdpNew, $mdpVerif)
+    });
+
     function concordanceMdp(champ1, champ2) {
         if ($(champ2).val() != $(champ1).val()){ //Verification de la concordance des champs
             alert("Les mots de passes ne concordent pas");
         }
     }
-
-    $submit.click(function (e) {
-        e.preventDefault();
-        concordanceMdp($mdpNew, $mdpVerif)
-    })
 });
