@@ -35,7 +35,6 @@ h1{
 
 form ul li {
     margin:10px 20px;
-
 }
 
 form ul li:last-child {
@@ -72,18 +71,8 @@ label {
 }
 
 #pswd_info {
-    /*position:absolute;*/
-    /*bottom:-75px;*/
-    /*bottom: -115px\9; !* IE Specific *!*/
-    /*right:55px;*/
-    /*width:250px;*/
-    /*padding:15px;*/
-    /*background:#fefefe;*/
-    /*font-size:.875em;*/
-    /*border-radius:5px;*/
-    /*box-shadow:0 1px 3px #ccc;*/
-    /*border:1px solid #ddd;*/
     display: none;
+    text-align: center;
 }
 #pswd_info h4 {
     margin:0 0 10px 0;
