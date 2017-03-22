@@ -4,23 +4,42 @@
  * CREATEUR : ETIENNE BLANC-COQUAND (etienne1296pro@gmail.com)
  * FONCTIONS : VERIFIER LA COMPLEXITE D'UN MOT DE PASSE ET SON EQUIVALENCE ENTRE LES DEUX CHAMPS
  */
-// TODO exemple de ce qu'il faut faire "http://www.webdesignerdepot.com/2012/01/password-strength-verification-with-jquery/"
 
 $(document).ready(function () {
-    var $mdpBase = $("#nowPassword"),
-        $mdpNew = $("#newPassword"),
-        $mdpVerif = $("#confirmPassword"),
-        $submit = $("#submit"),
-        $reset = $("#reset"),
-        $champPassword = $(".passwordChamp");
+    var $olMdp = $('#oldPassword').val(),
+        $newMdp = $('#newPassword').val(),
+        $confMdp = $('#confirmPassword').val();
 
-    $submit.click(function () {
-        concordanceMdp($mdpNew, $mdpVerif)
+    $('input[type=password]').keyup(function() {
+        var pswd = $(this).val();
+        //Validate the length
+        if (pswd.length < 5){
+            $('#length').removeClass('valid').addClass('invalid');
+        }else{
+            $('#length').removeClass('invalid').addClass('valid');
+        }
+        //Validate letter
+        if (pswd.match(/[A-z]/)){
+            $('#letter').removeClass('invalid').addClass('valid');
+        }else{
+            $('#letter').removeClass('valid').addClass('invalid');
+        }
+        //Validate capital letter
+        if (pswd.match(/[A-Z]/)){
+            $('#capital').removeClass('invalid').addClass('valid');
+        }else{
+            $('#capital').removeClass('valid').addClass('invalid');
+        }
+        //Validate number
+        if (pswd.match(/\d/)){
+            $('#number').removeClass('invalid').addClass('valid');
+        }else{
+            $('#number').removeClass('valid').addClass('invalid');
+        }
+    }).focus(function() {
+        $('#pswd_info').show();
+    }).blur(function() {
+        $('#pswd_info').hide();
     });
 
-    function concordanceMdp(champ1, champ2) {
-        if ($(champ2).val() != $(champ1).val()){ //Verification de la concordance des champs
-            alert("Les mots de passes ne concordent pas");
-        }
-    }
 });
