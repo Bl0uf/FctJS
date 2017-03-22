@@ -1,5 +1,7 @@
 /*Feuille de style pour les messages d'erreurs*/
-
+body{
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+}
 .errMsg{
     display: none;
     color: #F00;
